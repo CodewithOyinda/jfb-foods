@@ -1,6 +1,5 @@
 // styles/global.tsx
 
-export const bg = (color: string) => `bg-${color}`;
 export const text = (color: string) => `text-${color}`;
 export const flex = (value: number | string = 1) => `flex-${value}`;
 export const flexD = (dir: "row" | "col") => `flex flex-${dir}`;
@@ -17,10 +16,21 @@ export const mb = (val: number) => `mb-${val}`;
 export const rounded = (val: number | string) => `rounded-${val}`;
 export const w = (val: string | number) => `w-${val}`;
 export const h = (val: string | number) => `h-${val}`;
-export const color = (val: string) => `text-${val}`;
 
-export const COLORS = {
-  primary: "blue-600",
-  secondary: "purple-500",
-  muted: "gray-500",
+export const color = (val: string) => {
+  if (val.startsWith("#")) {
+    return `text-[${val}]`; 
+  }
+  return `text-${val}`; 
 };
+
+
+export const bg = (val: string) => {
+  if (val.startsWith("#")) {
+    return `bg-[${val}]`; 
+  }
+  return `bg-${val}`;
+};
+
+
+

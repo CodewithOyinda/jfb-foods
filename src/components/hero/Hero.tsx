@@ -1,31 +1,34 @@
 import logo from "../../assets/logo.png";
-// import { bg, flexD, px, mt } from "@/styles/global";
-import {  w, h, flex, flexD } from "../../styles/global";
+import { w, h, flexD, justify } from "../../styles/global";
 import { AiOutlineShoppingCart } from "react-icons/ai";
 import { FaWhatsapp } from "react-icons/fa";
 import { PiPhoneCall } from "react-icons/pi";
 
 const Hero = () => {
   return (
-    <div>
-      <div className={`${w(64)} ${h(70)}`}>
-        <img src={logo}  />
+    <div className={`flex ${flexD("row")} justify-between items-center ml-20 mr-20`}>
+      {/* Logo */}
+      <div className="w-20 h-30">
+        <img src={logo} alt="Logo" />
       </div>
-      
-      <div className={`${flexD("row")}`}>
+
+      {/* Navigation */}
+      <div className={`${flexD("row")} justify-between items-center gap-10 font-['Inter'] text-[16px] font-[500]`}>
         <p>Home</p>
         <p>Product</p>
         <p>Contact Us</p>
         <p>Testimony</p>
       </div>
-      <div className={`${flexD("row")}`}>
+
+      {/* Icons + Contact */}
+      <div className={`${flexD("row")} justify-between items-center gap-4 text-[#A30005]`}>
         <AiOutlineShoppingCart />
         <FaWhatsapp />
         <PiPhoneCall />
-        <p>+2348142398699</p>
+        <p className="underline font-['Mona_Sans'] text-[16px]">+2348142398699</p>
       </div>
     </div>
   );
-}
+};
 
 export default Hero;
