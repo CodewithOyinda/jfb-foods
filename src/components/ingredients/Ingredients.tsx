@@ -1,5 +1,5 @@
 import product from "../../assets/product.png";
-import Button from "../buttons/Button";
+import Button from "../buttons/button";
 import star from "../../assets/Star.png";
 
 const Ingredients = () => {
@@ -31,7 +31,9 @@ const Ingredients = () => {
             <p>natural spices. It's not just a sauce; it's an experience.</p>
           </div>
 
-          <p className="font-['Inter'] text-[#A30005] text-[20px] font-[600] pt-[20px] pb-[10px]">Ingredients</p>
+          <p className="font-['Inter'] text-[#A30005] text-[20px] font-[600] pt-[20px] pb-[10px]">
+            Ingredients
+          </p>
 
           {/* Ingredients + Star */}
           <div className="flex flex-row justify-between gap-2">

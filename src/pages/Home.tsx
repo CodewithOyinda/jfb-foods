@@ -1,11 +1,11 @@
-import About from "../components/about/About";
-import Hero from "../components/hero/Hero";
-import Intro from "../components/intro/Intro";
-import Ingredients from "../components/ingredients/Ingredients";
-import Order from "../components/order/Order";
-import Review from "../components/reviews/Review";
-import Contact from "../components/contact/Contact";
-import BottomNav from "../components/bottomNav/BottomNav";
+import About from "../components/about/about";
+import Hero from "../components/hero/hero";
+import Intro from "../components/intro/intro";
+import Ingredients from "../components/ingredients/ingredients";
+import Order from "../components/order/order";
+import Review from "../components/reviews/review";
+import Contact from "../components/contact/contact";
+import BottomNav from "../components/bottomNav/bottomNav";
 
 
 const Home = () => {
