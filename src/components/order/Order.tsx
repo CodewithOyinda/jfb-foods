@@ -1,6 +1,6 @@
 import bgTwo from "../../assets/image 468.png";
 import { FaAngleDown } from "react-icons/fa6";
-import Button from "../buttons/Button";
+import Button from "../buttons/button";
 
 const Order = () => {
   return (
@@ -64,7 +64,7 @@ const Order = () => {
             </div>
           </div>
           <div className="mt-6">
-          <Button />
+            <Button />
           </div>
         </div>
       </div>
