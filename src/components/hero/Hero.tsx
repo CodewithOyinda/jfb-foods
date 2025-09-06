@@ -1,14 +1,14 @@
 import logo from "../../assets/logo.png";
-import { w, h, flexD, justify } from "../../styles/global";
+import {flexD } from "../../styles/global";
 import { AiOutlineShoppingCart } from "react-icons/ai";
 import { FaWhatsapp } from "react-icons/fa";
 import { PiPhoneCall } from "react-icons/pi";
 
 const Hero = () => {
   return (
-    <div className={`flex ${flexD("row")} justify-between items-center ml-20 mr-20`}>
+    <div className={`flex ${flexD("row")} justify-between items-center ml-20 mr-20 h-[92px]`}>
       {/* Logo */}
-      <div className="w-20 h-30">
+      <div className="w-[64px] h-[70px]">
         <img src={logo} alt="Logo" />
       </div>
 
