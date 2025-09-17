@@ -10,11 +10,11 @@ const Order = () => {
 
       {/* Overlay Form Section */}
       <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 flex flex-col items-center gap-6">
-        <p className="text-[46px] font-[700] font-['Space_Grotesk'] ">
+        <p className="sm:text-[46px] text-[20px] pt-30 font-[700] font-['Space_Grotesk'] ">
           Place an Order
         </p>
 
-        <div className="w-[484px] bg-[#FAFAFA] rounded-[10px] border border-[#D9D9D94D] p-6 shadow-lg">
+        <div className="sm:w-[484px] w-[300px] bg-[#FAFAFA] rounded-[10px] border border-[#D9D9D94D] p-6 shadow-lg">
           {/* Row 1 */}
           <div className="flex flex-row items-center justify-between gap-6 mb-4">
             <div className="flex flex-col w-1/2">
@@ -63,8 +63,8 @@ const Order = () => {
               />
             </div>
           </div>
-          <div className="mt-6">
-            <Button />
+          <div className="mt-6 flex justify-center">
+            <Button  size="large"/>
           </div>
         </div>
       </div>
