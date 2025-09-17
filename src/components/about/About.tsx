@@ -1,4 +1,5 @@
 import Button from "../buttons/button";
+import products from "../../assets/products.png";
 import product from "../../assets/product.png";
 import sachet from "../../assets/sachet.png";
 import mask from "../../assets/Mask group (1).png";
@@ -10,12 +11,12 @@ import pepperThree from "../../assets/pepper-3.png";
 const About = () => {
   return (
     <div className=" mt-50">
-      <div className="flex flex-row items-center justify-center gap-10 ">
+      <div className="flex sm:flex-row flex-col items-center justify-center gap-10 ">
         <div>
-          <p className={`text-[46px] font-[700] font-['Space_Grotesk']`}>
+          <p className={`sm:text-[46px] text-[20px] font-[700] font-['Space_Grotesk']`}>
             About us Shitoland
           </p>
-          <div className="font-['Mona_Sans'] text-[20px] font-[500]">
+          <div className="font-['Mona_Sans'] sm:text-[20px] text-[14px] font-[500]">
             <p>
               At JFB foods, we bring the fiery flavors straight to your table.
             </p>
@@ -27,9 +28,13 @@ const About = () => {
           </div>
           <Button />
         </div>
-        <div className="bg-[#F8EBEB] w-[585px] h-[391px] rounded-[5px] ">
+        <div className="bg-[#F8EBEB] sm:w-[585px] w-[300px] h-[300px] sm:h-[391px] rounded-[5px] ">
           <div className="flex flex-row items-center justify-center">
             <img
+              src={products}
+              alt="product"
+            />
+            {/* <img
               src={product}
               alt="product"
               className="h-[300px] w-[400px] block -mr-[290px]"
@@ -43,16 +48,16 @@ const About = () => {
               src={sachet}
               alt="sachet"
               className="h-[148px] w-[120px] block"
-            />
+            /> */}
           </div>
         </div>
       </div>
-      <div className="flex flex-row items-center justify-between m-[30px]">
+      <div className="flex flex-row  items-center justify-between m-[30px]">
         <div>
-          <p className={`text-[46px] font-[700] font-['Space_Grotesk']`}>
+          <p className={`sm:text-[46px] text-[20px] font-[700] font-['Space_Grotesk']`}>
             Our Product
           </p>
-          <div className="font-['Mona_Sans'] text-[20px] font-[500]">
+          <div className="font-['Mona_Sans'] sm:text-[20px] text-[12px] font-[500]">
             <p>We offer a diverse array of product that nourish</p>
             <p>your taste buds and a blend to your taste.</p>
           </div>
@@ -61,7 +66,7 @@ const About = () => {
           <img src={mask} alt="mask" className="h-[148px] w-[120px] " />
         </div>
       </div>
-      <div className="flex flex-row items-center justify-between gap-[10px] m-[30px]">
+      <div className="flex sm:flex-row flex-col items-center justify-between gap-[10px] m-[30px]">
         <div className="w-[400px] h-[362px] bg-[#FFFFFF] rounded-[10px] border border-[#C9C9C975] p-6 shadow-lg">
           <div className="flex items-center justify-center pt-[20px] pb-[10px]">
             <img src={product} alt="product" className="h-[180px] w-[200px]" />
@@ -99,7 +104,7 @@ const About = () => {
           </div>
         </div>
       </div>
-      <div className="flex flex-row  gap-70 m-[50px]">
+      <div className="flex flex-row sm:gap-70 gap-10 m-[50px]">
         <div>
           <img
             src={maskgroup}
@@ -108,16 +113,16 @@ const About = () => {
           />
         </div>
         <div>
-          <p className={`text-[46px] font-[700] font-['Space_Grotesk']`}>
+          <p className={`sm:text-[46px] text-[20px] font-[700] font-['Space_Grotesk']`}>
             Spices for taste buds
           </p>
-          <div className="font-['Mona_Sans'] text-[20px] font-[500]">
+          <div className="font-['Mona_Sans'] sm:text-[20px] text-[14px] font-[500]">
             <p>We offer a diverse array of product that nourish your</p>
             <p>taste buds and a blend to your taste.</p>
           </div>
         </div>
       </div>
-      <div className="flex flex-row items-center gap-[10px] justify-between m-[30px]">
+      <div className="flex sm:flex-row flex-col items-center gap-[10px] justify-between m-[30px]">
         <div className="w-[400px] h-[362px] bg-[#FFFFFF] rounded-[10px] border border-[#C9C9C975] p-6 shadow-lg">
           <div className="flex items-center justify-center pt-[20px] pb-[10px]">
             <img src={pepperOne} alt="pepper" />
