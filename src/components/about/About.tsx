@@ -10,7 +10,7 @@ import pepperThree from "../../assets/pepper-3.png";
 
 const About = () => {
   return (
-    <div className=" mt-50">
+    <div className=" sm:mt-50 mt-10">
       <div className="flex sm:flex-row flex-col items-center justify-center gap-10 ">
         <div>
           <p className={`sm:text-[46px] text-[20px] font-[700] font-['Space_Grotesk']`}>

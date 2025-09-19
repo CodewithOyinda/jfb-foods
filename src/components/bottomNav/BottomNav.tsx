@@ -1,5 +1,4 @@
 import logo from "../../assets/logo.png";
-import {flexD } from "../../styles/global";
 
 
 const BottomNav = () => {
