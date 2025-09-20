@@ -1,4 +1,4 @@
-import Button from "../buttons/button";
+import Button from "../buttons/Button";
 import products from "../../assets/products.png";
 import product from "../../assets/product.png";
 import sachet from "../../assets/sachet.png";
@@ -13,7 +13,9 @@ const About = () => {
     <div className=" sm:mt-50 mt-10">
       <div className="flex sm:flex-row flex-col items-center justify-center gap-10 ">
         <div>
-          <p className={`sm:text-[46px] text-[20px] font-[700] font-['Space_Grotesk']`}>
+          <p
+            className={`sm:text-[46px] text-[20px] font-[700] font-['Space_Grotesk']`}
+          >
             About us Shitoland
           </p>
           <div className="font-['Mona_Sans'] sm:text-[20px] text-[14px] font-[500]">
@@ -30,10 +32,7 @@ const About = () => {
         </div>
         <div className="bg-[#F8EBEB] sm:w-[585px] w-[300px] h-[300px] sm:h-[391px] rounded-[5px] ">
           <div className="flex flex-row items-center justify-center">
-            <img
-              src={products}
-              alt="product"
-            />
+            <img src={products} alt="product" />
             {/* <img
               src={product}
               alt="product"
@@ -54,7 +53,9 @@ const About = () => {
       </div>
       <div className="flex flex-row  items-center justify-between m-[30px]">
         <div>
-          <p className={`sm:text-[46px] text-[20px] font-[700] font-['Space_Grotesk']`}>
+          <p
+            className={`sm:text-[46px] text-[20px] font-[700] font-['Space_Grotesk']`}
+          >
             Our Product
           </p>
           <div className="font-['Mona_Sans'] sm:text-[20px] text-[12px] font-[500]">
@@ -113,7 +114,9 @@ const About = () => {
           />
         </div>
         <div>
-          <p className={`sm:text-[46px] text-[20px] font-[700] font-['Space_Grotesk']`}>
+          <p
+            className={`sm:text-[46px] text-[20px] font-[700] font-['Space_Grotesk']`}
+          >
             Spices for taste buds
           </p>
           <div className="font-['Mona_Sans'] sm:text-[20px] text-[14px] font-[500]">
