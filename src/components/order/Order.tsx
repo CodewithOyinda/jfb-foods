@@ -1,6 +1,6 @@
 import bgTwo from "../../assets/image 468.png";
 import { FaAngleDown } from "react-icons/fa6";
-import Button from "../buttons/button";
+import Button from "../buttons/Button";
 
 const Order = () => {
   return (

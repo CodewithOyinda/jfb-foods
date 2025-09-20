@@ -1,5 +1,5 @@
 import product from "../../assets/jfb image.png";
-import Button from "../buttons/button";
+import Button from "../buttons/Button";
 import star from "../../assets/Star.png";
 
 const Ingredients = () => {
@@ -7,11 +7,8 @@ const Ingredients = () => {
     <div className="bg-[#F8EBEB]">
       <div className="flex sm:flex-row flex-col items-center justify-between m-[30px]">
         {/* Left Side - Products */}
-        <div >
-          <img
-            src={product}
-            alt="product"
-          />
+        <div>
+          <img src={product} alt="product" />
         </div>
 
         {/* Right Side - Info */}
@@ -46,7 +43,11 @@ const Ingredients = () => {
 
             {/* Star with Text Centered */}
             <div className="relative flex items-center justify-center">
-              <img src={star} alt="star" className="sm:w-[180px] sm:h-[180px] w-[100px] h-[100px]" />
+              <img
+                src={star}
+                alt="star"
+                className="sm:w-[180px] sm:h-[180px] w-[100px] h-[100px]"
+              />
               <div className="absolute flex flex-col items-center justify-center text-center">
                 <p className="sm:text-[32px] text-[14px] font-[700] font-['Space_Grotesk'] text-[#EBEBEB]">
                   8 GH
@@ -58,7 +59,7 @@ const Ingredients = () => {
             </div>
           </div>
           <div className="mb-10">
-          <Button />
+            <Button />
           </div>
         </div>
       </div>

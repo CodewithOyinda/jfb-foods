@@ -2,7 +2,7 @@ import bg from "../../assets/bg-image.png";
 import product from "../../assets/jfb image.png";
 import frame from "../../assets/Frame-1 (1).png";
 import frame2 from "../../assets/Frame-1 (2).png";
-import Button from "../buttons/button";
+import Button from "../buttons/Button";
 
 const Intro = () => {
   return (
