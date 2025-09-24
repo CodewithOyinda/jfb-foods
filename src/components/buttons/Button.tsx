@@ -12,7 +12,7 @@ const base =
   "bg-[#A30005] text-white sm:rounded-[5px] rounded-[3px]  font-['Inter'] font-[600] hover:bg-[#800004] transition-colors";
 
 const sizes = {
-  mini:  "sm:h-[40px] h-[20px] w-[90px] sm:w-[150px] sm:text-[14px] text-[12px] px-4",        
+  mini:  "sm:h-[40px] h-[20px] w-[90px] sm:w-[150px] sm:text-[14px] text-[10px] px-4",        
   large: "sm:h-[40px] h-[20px] w-[200px] sm:w-[450px] sm:text-[16px] text-[12px] px-6",         
 };
 
