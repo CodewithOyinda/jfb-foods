@@ -4,7 +4,7 @@ import Intro from "../components/intro/Intro";
 import Ingredients from "../components/ingredients/Ingredients";
 import Order from "../components/order/Order";
 import Review from "../components/reviews/Review";
-import Contact from "../components/contact/Contact";
+import Contact from "../components/contact/contact";
 import BottomNav from "../components/bottomNav/BottomNav";
 import { CartProvider } from "../context/CartContext";
 
