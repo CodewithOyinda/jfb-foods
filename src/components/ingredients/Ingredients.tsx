@@ -59,7 +59,17 @@ const Ingredients = () => {
             </div>
           </div>
           <div className="mb-10">
-            <Button />
+            <Button 
+             onClick={() => {
+              const orderSection = document.getElementById("order");
+              if (orderSection) {
+                orderSection.scrollIntoView({
+                  behavior: "smooth",
+                  block: "start",
+                });
+              }
+            }}
+            />
           </div>
         </div>
       </div>

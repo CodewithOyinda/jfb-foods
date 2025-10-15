@@ -6,32 +6,38 @@ import Order from "../components/order/Order";
 import Review from "../components/reviews/Review";
 import Contact from "../components/contact/Contact";
 import BottomNav from "../components/bottomNav/BottomNav";
+import { CartProvider } from "../context/CartContext";
 
 export default function Home() {
   return (
-    <div className="scroll-smooth">
-      <Hero />
+    <CartProvider>
+      <div className="scroll-smooth">
+        <Hero />
 
-      <section id="home" className="scroll-mt-24 md:scroll-mt-[110px]">
-        <Intro />
-      </section>
+        <section id="home" className="scroll-mt-24 md:scroll-mt-[110px]">
+          <Intro />
+        </section>
 
-      <section id="product" className="scroll-mt-24 md:scroll-mt-[110px]">
-        <About />
-      </section>
+        <section id="product" className="scroll-mt-24 md:scroll-mt-[110px]">
+          <About />
+        </section>
 
-      <Ingredients />
-      <Order />
+        <Ingredients />
 
-      <section id="testimony" className="scroll-mt-24 md:scroll-mt-[110px]">
-        <Review />
-      </section>
+        <section id="order" className="scroll-mt-24 md:scroll-mt-[110px]">
+          <Order />
+        </section>
 
-      <section id="contact" className="scroll-mt-24 md:scroll-mt-[110px]">
-        <Contact />
-      </section>
+        <section id="testimony" className="scroll-mt-24 md:scroll-mt-[110px]">
+          <Review />
+        </section>
 
-      <BottomNav />
-    </div>
+        <section id="contact" className="scroll-mt-24 md:scroll-mt-[110px]">
+          <Contact />
+        </section>
+
+        <BottomNav />
+      </div>
+    </CartProvider>
   );
 }
