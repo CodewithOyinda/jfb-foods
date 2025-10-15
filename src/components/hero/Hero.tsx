@@ -4,9 +4,11 @@ import { AiOutlineShoppingCart } from "react-icons/ai";
 import { FaWhatsapp } from "react-icons/fa";
 import { PiPhoneCall } from "react-icons/pi";
 import { HiOutlineMenu, HiOutlineX } from "react-icons/hi";
+import { useCart } from "../../context/CartContext";
 
 const Hero = () => {
   const [open, setOpen] = useState(false);
+  const { cartCount } = useCart();
 
   // Prevent body scroll when sheet is open
   useEffect(() => {
@@ -76,7 +78,15 @@ const Hero = () => {
 
           {/* Desktop actions */}
           <div className="hidden md:flex items-center gap-4 text-[#A30005]">
-            <AiOutlineShoppingCart className="text-xl" />
+            <div className="relative">
+              <AiOutlineShoppingCart className="text-xl" />
+              {/* badge */}
+              {cartCount > 0 && (
+                <span className="absolute -top-2 -right-3 bg-[#A30005] text-white text-[11px] font-semibold rounded-full px-1.5 py-0.5 min-w-[18px] text-center">
+                  {cartCount}
+                </span>
+              )}
+            </div>
             <FaWhatsapp className="text-xl" />
             <PiPhoneCall className="text-xl" />
             <a
@@ -89,7 +99,14 @@ const Hero = () => {
 
           {/* Mobile actions */}
           <div className="flex md:hidden items-center gap-3 text-[#A30005]">
-            <AiOutlineShoppingCart className="text-2xl" />
+            <div className="relative">
+              <AiOutlineShoppingCart className="text-2xl" />
+              {cartCount > 0 && (
+                <span className="absolute -top-2 -right-3 bg-[#A30005] text-white text-[10px] font-semibold rounded-full px-1 py-0.5 min-w-[16px] text-center">
+                  {cartCount}
+                </span>
+              )}
+            </div>
             <button
               aria-label="Open menu"
               onClick={() => setOpen(true)}

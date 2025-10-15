@@ -42,7 +42,17 @@ const Intro = () => {
           </div>
 
           <div className="sm:mt-6 mt-2">
-            <Button />
+            <Button 
+              onClick={() => {
+              const orderSection = document.getElementById("order");
+              if (orderSection) {
+                orderSection.scrollIntoView({
+                  behavior: "smooth",
+                  block: "start",
+                });
+              }
+            }}
+            />
           </div>
         </div>
 

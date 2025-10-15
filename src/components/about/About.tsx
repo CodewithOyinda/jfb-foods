@@ -79,9 +79,9 @@ function PepperCard({
 }
 
 /** Mobile carousel constants */
-const CARD_W = 280; 
-const GAP = 16;     
-const SPEED = 8;    
+const CARD_W = 280;
+const GAP = 16;
+const SPEED = 8;
 const LEN = pepperItems.length;
 
 const HALF = LEN * (CARD_W + GAP) - GAP;
@@ -96,12 +96,26 @@ const About = () => {
             About us Shitoland
           </p>
           <div className="font-['Mona_Sans'] sm:text-[20px] text-[14px] font-[500]">
-            <p>At JFB foods, we bring the fiery flavors straight to your table.</p>
-            <p>Our authentic shito sauce is crafted using traditional recipes</p>
+            <p>
+              At JFB foods, we bring the fiery flavors straight to your table.
+            </p>
+            <p>
+              Our authentic shito sauce is crafted using traditional recipes
+            </p>
             <p>and the finest ingredients, delivering a unique blend of heat</p>
             <p className="pb-[30px]">and flavor that will elevate any dish.</p>
           </div>
-          <Button />
+          <Button
+            onClick={() => {
+              const orderSection = document.getElementById("order");
+              if (orderSection) {
+                orderSection.scrollIntoView({
+                  behavior: "smooth",
+                  block: "start",
+                });
+              }
+            }}
+          />
         </div>
 
         <div className="bg-[#F8EBEB] sm:w-[585px] w-[300px] h-[250px] sm:h-[391px] rounded-[5px]">
@@ -127,34 +141,70 @@ const About = () => {
 
       {/* Three product cards */}
       <div className="flex sm:flex-row flex-col items-center justify-between gap-[10px] m-[30px]">
-        <div className="w-[400px] h-auto bg-[#FFFFFF] rounded-[10px] border border-[#C9C9C975] p-6 shadow-lg">
+        <div className="sm:w-[400px] w-[300px] h-auto bg-[#FFFFFF] rounded-[10px] border border-[#C9C9C975] p-6 shadow-lg">
           <div className="flex items-center justify-center pt-[20px] pb-[10px]">
             <img src={product} alt="product" className="h-[180px] w-[200px]" />
           </div>
-          <p className="text-[22px] font-[700] font-['Space_Grotesk']">Medium Shito Sauce:</p>
+          <p className="text-[22px] font-[700] font-['Space_Grotesk']">
+            Medium Shito Sauce:
+          </p>
           <div className="flex flex-row items-center justify-between">
             <p className="font-['Mona_Sans'] text-[16px]">50 CL . 40 GH</p>
-            <Button />
+            <Button 
+              onClick={() => {
+              const orderSection = document.getElementById("order");
+              if (orderSection) {
+                orderSection.scrollIntoView({
+                  behavior: "smooth",
+                  block: "start",
+                });
+              }
+            }}
+            />
           </div>
         </div>
-        <div className="w-[400px] h-auto bg-[#FFFFFF] rounded-[10px] border border-[#C9C9C975] p-6 shadow-lg">
+        <div className="sm:w-[400px] w-[300px] h-auto bg-[#FFFFFF] rounded-[10px] border border-[#C9C9C975] p-6 shadow-lg">
           <div className="flex items-center justify-center pt-[20px] pb-[10px]">
             <img src={product} alt="product" className="h-[200px] w-[300px]" />
           </div>
-          <p className="text-[22px] font-[700] font-['Space_Grotesk']">Large Shito Sauce:</p>
+          <p className="text-[22px] font-[700] font-['Space_Grotesk']">
+            Large Shito Sauce:
+          </p>
           <div className="flex flex-row items-center justify-between">
             <p className="font-['Mona_Sans'] text-[16px]">150 CL . 80 GH</p>
-            <Button />
+            <Button 
+              onClick={() => {
+              const orderSection = document.getElementById("order");
+              if (orderSection) {
+                orderSection.scrollIntoView({
+                  behavior: "smooth",
+                  block: "start",
+                });
+              }
+            }}
+            />
           </div>
         </div>
-        <div className="w-[400px] h-auto bg-[#FFFFFF] rounded-[10px] border border-[#C9C9C975] p-6 shadow-lg">
+        <div className="sm:w-[400px] w-[300px] h-auto bg-[#FFFFFF] rounded-[10px] border border-[#C9C9C975] p-6 shadow-lg">
           <div className="flex items-center justify-center pt-[20px] pb-[10px]">
             <img src={sachet} alt="sachet" className="h-[180px] w-[140px]" />
           </div>
-          <p className="text-[22px] font-[700] font-['Space_Grotesk']">Sachet Shito Sauce:</p>
+          <p className="text-[22px] font-[700] font-['Space_Grotesk']">
+            Sachet Shito Sauce:
+          </p>
           <div className="flex flex-row items-center justify-between">
             <p className="font-['Mona_Sans'] text-[16px]">5 CL . 10 GH</p>
-            <Button />
+            <Button 
+              onClick={() => {
+              const orderSection = document.getElementById("order");
+              if (orderSection) {
+                orderSection.scrollIntoView({
+                  behavior: "smooth",
+                  block: "start",
+                });
+              }
+            }}
+            />
           </div>
         </div>
       </div>

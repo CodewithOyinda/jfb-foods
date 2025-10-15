@@ -1,8 +1,40 @@
 import bgTwo from "../../assets/image 468.png";
 import { FaAngleDown } from "react-icons/fa6";
 import Button from "../buttons/Button";
+import { useState } from "react";
+import { useCart } from "../../context/CartContext";
+
+const PRICES: Record<string, number> = {
+  Jar: 40, 
+  Sachet: 10,
+  Packet: 80,
+};
 
 const Order = () => {
+  const { addToCart } = useCart();
+
+  const [size, setSize] = useState<"Small" | "Medium" | "Large">("Small");
+  const [type, setType] = useState<"Jar" | "Sachet" | "Packet">("Jar");
+  const [quantity, setQuantity] = useState<number>(1);
+
+  const pricePerUnit = PRICES[type] ?? 0;
+  const totalPrice = pricePerUnit * (quantity || 0);
+
+  const handlePlaceOrder = () => {
+    const qty = Math.max(0, Math.round(quantity || 0));
+    if (qty <= 0) {
+      alert("Please enter a valid quantity");
+      return;
+    }
+
+    // Add to cart
+    addToCart(qty);
+
+    // Optionally: show a toast or clear the form
+    alert(`Added ${qty} item(s) to cart`);
+    setQuantity(1);
+  };
+
   return (
     <div className="relative w-full">
       {/* Background Image */}
@@ -20,7 +52,8 @@ const Order = () => {
             <div className="flex flex-col w-1/2">
               <label className="text-sm font-medium mb-1">Size</label>
               <div className="relative">
-                <select className="w-full border border-gray-300 rounded-md px-3 py-2 appearance-none">
+                <select value={size}
+                  onChange={(e) => setSize(e.target.value as any)} className="w-full border sm:text-[16px] text-[12px] border-gray-300 rounded-md px-3 py-2 appearance-none">
                   <option>Small</option>
                   <option>Medium</option>
                   <option>Large</option>
@@ -32,7 +65,8 @@ const Order = () => {
             <div className="flex flex-col w-1/2">
               <label className="text-sm font-medium mb-1">Product Type</label>
               <div className="relative">
-                <select className="w-full border border-gray-300 rounded-md px-3 py-2 appearance-none">
+                <select value={type}
+                  onChange={(e) => setType(e.target.value as any)} className="w-full border sm:text-[16px] text-[12px] border-gray-300 rounded-md px-3 py-2 appearance-none">
                   <option>Jar</option>
                   <option>Sachet</option>
                   <option>Packet</option>
@@ -48,8 +82,11 @@ const Order = () => {
               <label className="text-sm font-medium mb-1">Quantity</label>
               <input
                 type="number"
-                className="w-full border border-gray-300 rounded-md px-3 py-2"
+                value={quantity}
+                onChange={(e) => setQuantity(Math.max(0, Number(e.target.value)))}
+                className="w-full border sm:text-[16px] text-[12px] border-gray-300 rounded-md px-3 py-2"
                 placeholder="Enter quantity"
+                min={0}
               />
             </div>
 
@@ -57,14 +94,16 @@ const Order = () => {
               <label className="text-sm font-medium mb-1">Price</label>
               <input
                 type="text"
-                className="w-full border border-gray-300 rounded-md px-3 py-2 bg-gray-100"
+                value={totalPrice > 0 ? `${totalPrice} NGN` : ""}
+                readOnly
+                className="w-full border sm:text-[16px] text-[12px] border-gray-300 rounded-md px-3 py-2 bg-gray-100"
                 placeholder="Auto-calculated"
                 disabled
               />
             </div>
           </div>
           <div className="mt-6 flex justify-center">
-            <Button  size="large"/>
+            <Button  size="large" onClick={handlePlaceOrder}/>
           </div>
         </div>
       </div>
